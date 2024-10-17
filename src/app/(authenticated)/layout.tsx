@@ -12,7 +12,7 @@ import { getAuthAdminToken } from '@/lib/authHelper'
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { TabsContent } from '@/components/ui/tabs'
-import { SideMenu } from './(components)/side-menu'
+// import { SideMenu } from './(components)/menu'
 import React from 'react'
 import '@/styles/piechart-style.css'
 
@@ -33,13 +33,9 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
       <DashboardHeader />
       <div className='my-2'></div>
       <div className="flex-1 md:border border-dashed border-opacity-25 rounded-md border-yellow-400 " style={{ overflowWrap: 'anywhere' }}>
-        {/* <div className='conta11iner fl11ex py-4 w-full'> */}
-        {/* <SideMenu>
-            {children}
-          </SideMenu> */}
-        {/* <SideMenu /> */}
-        {children}
-        {/* </div> */}
+        <div className='flex flex-row'>
+          {children}
+        </div>
       </div>
       <div className='my-2'></div>
       <DashboardFooter />

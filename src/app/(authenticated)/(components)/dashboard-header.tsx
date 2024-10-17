@@ -23,6 +23,10 @@ export function DashboardHeader({ }) {
             <i className="fa-solid fa-gauge-high me-2 text-lg"></i>
             Ana Sayfa
           </CustomLink>
+          <CustomLink className="rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800" href="/members">
+            <i className="fa-solid fa-users me-2 text-lg"></i>
+            Üyeler
+          </CustomLink>
           <CustomLink className="rounded-md px-3 py-2 hover:bg-gray-100 dark:hover:bg-gray-800" href="/reports">
             <i className="fa-solid fa-chart-line me-2 text-lg"></i>
             Raporlar

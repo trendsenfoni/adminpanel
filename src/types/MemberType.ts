@@ -1,4 +1,4 @@
-export interface UserType {
+export interface MemberType {
   _id?: string
   username?: string
   email?: string
