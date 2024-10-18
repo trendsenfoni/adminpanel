@@ -15,7 +15,7 @@ export function getItem(path: string, admintoken?: string) {
         } else {
           reject(result.error)
         }
-      }).catch(reject)
+      }).catch(err => reject(err.message || err || 'error'))
   })
 }
 
@@ -33,7 +33,7 @@ export function getList(path: string, admintoken?: string) {
         } else {
           reject(result.error)
         }
-      }).catch(reject)
+      }).catch(err => reject(err.message || err || 'error'))
   })
 }
 
@@ -51,7 +51,7 @@ export function putItem(path: string, admintoken?: string, item?: any) {
         } else {
           reject(result.error)
         }
-      }).catch(reject)
+      }).catch(err => reject(err.message || err || 'error'))
   })
 }
 export function postItem(path: string, admintoken?: string, item?: any) {
@@ -70,10 +70,7 @@ export function postItem(path: string, admintoken?: string, item?: any) {
         } else {
           reject(result.error)
         }
-      }).catch(err => {
-        console.log('postItem err:', err)
-        reject(err)
-      })
+      }).catch(err => reject(err.message || err || 'error'))
   })
 }
 export function deleteItem(path: string, admintoken?: string) {
@@ -89,7 +86,7 @@ export function deleteItem(path: string, admintoken?: string) {
         } else {
           reject(result.error)
         }
-      }).catch(reject)
+      }).catch(err => reject(err.message || err || 'error'))
   })
 }
 

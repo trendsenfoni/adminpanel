@@ -49,7 +49,11 @@ export default function MemberListPage() {
           <TableRow >
             <TableHead className="">Member</TableHead>
             <TableHead colSpan={2}>Email</TableHead>
-            <TableHead className="text-center w-12">#</TableHead>
+            <TableHead className="text-center w-18 text-2xl">
+              <ButtonLink href={`/members/addnew`} type={'success'}>
+                <i className="fa-solid fa-square-plus"></i>
+              </ButtonLink>
+            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody >
@@ -57,12 +61,13 @@ export default function MemberListPage() {
             <TableRow key={e._id}>
               <TableCell className="font-medium">{e.fullName}</TableCell>
               <TableCell colSpan={2}>{e.email}</TableCell>
-              <TableCell className="text-center">
-                <Button variant={'outline'}
-                  onClick={() => alert(e.email)}
-                >
+              <TableCell className="flex justify-center gap-4 text-xl">
+                <ButtonLink href={`/members/${e._id}/connector`} type=''>
+                  <i className="fa-solid fa-plug"></i>
+                </ButtonLink>
+                <ButtonLink href={`/members/${e._id}`} type=''>
                   <i className="fa-solid fa-edit"></i>
-                </Button>
+                </ButtonLink>
               </TableCell>
             </TableRow>
           ))}

@@ -1,6 +1,8 @@
+import { MemberType } from './MemberType'
 
 export interface SettingType {
   _id?: string
+  member?: MemberType
   connector?: ConnectorType
 }
 

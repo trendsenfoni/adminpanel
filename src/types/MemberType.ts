@@ -2,6 +2,7 @@ export interface MemberType {
   _id?: string
   username?: string
   email?: string
+  password?: string
   phoneNumber?: string
   role?: string
   passive?: boolean

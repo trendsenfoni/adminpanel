@@ -7,12 +7,7 @@ import { cookies } from 'next/headers'
 import { RedirectType, redirect } from 'next/navigation'
 import { DashboardHeader } from './(components)/dashboard-header'
 import DashboardFooter from './(components)/dashboard-footer'
-import { UserType } from '@/types/UserType'
 import { getAuthAdminToken } from '@/lib/authHelper'
-import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable'
-import { TooltipProvider } from '@/components/ui/tooltip'
-import { TabsContent } from '@/components/ui/tabs'
-// import { SideMenu } from './(components)/menu'
 import React from 'react'
 import '@/styles/piechart-style.css'
 
@@ -29,11 +24,11 @@ const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   }
 
   return (
-    <div className="flex min-h-screen w-full flex-col px-2">
+    <div className="flex min-h-screen w-full flex-col px-2 dark:bg-[#030611] ">
       <DashboardHeader />
       <div className='my-2'></div>
       <div className="flex-1 md:border border-dashed border-opacity-25 rounded-md border-yellow-400 " style={{ overflowWrap: 'anywhere' }}>
-        <div className='flex flex-row'>
+        <div className='container mx-auto py-1 px-1 md:px-4 md:py-4'>
           {children}
         </div>
       </div>
